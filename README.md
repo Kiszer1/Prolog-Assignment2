@@ -1,4 +1,4 @@
-# Prolog-Assignment2
+Second university assignment in the course Logic Programming in prolog.
 
 SAT Solving with Binary Numbers
 In this exercise you are required to encode operations on binary numbers to CNF,
@@ -10,6 +10,8 @@ the bit vectors [1,1,-1,1] and [1,1,-1,1,-1,-1] both represent the number 11. Th
 vector [X,Y,Z] represents an unknown binary number with 3 bits. The bit vector
 [1,Y,Z] represents an odd binary number with 3 bits, and the bit vector [-1,Y,Z]
 represents an even binary number with three bits.
+
+
 Task 1: Encoding Addition (10%)
 You are to write a Prolog predicate add(Xs,Ys,Zs,Cnf) which encodes binary addition. The predicate expects Xs and Ys to be bound to bit vectors. It creates the
 bit vector Zs (with a sufficient number of bits) and a Cnf which is satisfied precisely
@@ -31,6 +33,8 @@ add(Xs,Ys,PaddedZs,Cnf), sat(Cnf).
 Xs = [-1, 1, 1, -1],
 Ys = [1, 1, 1, -1],
 ...
+
+
 Task 2: Encoding less equals and less than (10%)
 You are to write a Prolog predicate leq(Xs,Ys,Xs,Cnf) which encodes the binary
 relation less equal. The predicate expect Xs and Ys to be bound to bit vectors. It
@@ -47,6 +51,8 @@ creates a Cnf which is satisfied precisely when Xs is less than Ys. For example:
 Xs = [1, -1, -1],
 Ys = [-1, 1],
 ...
+
+
 Task 3: Encoding Sum (10%)
 You are to write a Prolog predicate sum(ListofNumbers, Zs, Cnf) which encodes
 the sum of a list of binary numbers. The predicate expects List to be bound to a
@@ -71,6 +77,8 @@ Xs1 = [-1, -1, -1, -1, -1],
 Xs2 = [1, 1, 1, 1, -1],
 Xs3 = [1, 1, 1, 1, -1],
 ...
+
+
 Task 4: Encoding Multiplication (10%)
 You are to write a Prolog predicate times(Xs,Ys,Xs,Cnf) which encodes binary
 multiplication. The predicate expects Xs and Ys to be bound to bit vectors. It
@@ -91,6 +99,8 @@ length(Xs,4), length(Ys,4), times(Xs,Ys,PaddedZs,Cnf), sat(Cnf).
 Xs = [1, 1, -1, -1],
 Ys = [1, -1, 1, -1],
 ...
+
+
 Task 5: Encoding Power (10%)
 You are to write a Prolog predicate power(N,Xs,Zs,Cnf) which encodes binary
 exponent. The predicate expects Xs and Ys to be bound to bit vectors. It creates
@@ -106,6 +116,8 @@ Note: In this task part of your grade will relate to the size (number of clauses
 of the CNF encoding. For the previous example, there is a solution which creates a
 CNF with less than 500 clauses. For the similar query with power(7,Xs,Zs,Cnf),
 there is an encoding with less than 9000 clauses.
+
+
 Task 6: Encoding Power Equations(10%)
 An (n, m) power equation is an equation of the form
 b
@@ -126,6 +138,8 @@ Example
 Zs = [1, -1, 1],
 List = [[1, 1, -1], [-1, -1, 1]],
 ...
+
+
 Task 7: Euler’s Conjecture(20%)
 About 200 years ago Euler conjectured that for that for all integers n and k greater
 than 1, if the sum of n many k
@@ -168,6 +182,8 @@ Time12 = 57
 ...
 ?- solve(euler(5,7), Solution).
 false.
+
+
 Task 8: Power Partition — All Solutions(20%)
 The n
 th power partition of a number b is a sequence of n numbers (a1, as, . . . , an)
